@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Joke a Day</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Joke a Day</h1>
+    <button
+    class="apple"
+      hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode&type=single"
+      hx-target="#joke-container"
+    >Cure Me</button>
+
+    <p class="joke" id="joke-container">If you've had a hard day, just like 'an apple a day keeps the doctor away,' a joke a day cures what ails ya. <span class="emphasis">click the button above</span> to replace my speel with a joke.</p>
+  </div>
+
+  <script src="https://unpkg.com/htmx.org@1.9.4"></script> 
+</body>
+</html>

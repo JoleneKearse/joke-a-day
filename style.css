@@ -1,0 +1,119 @@
+:root {
+  --clr-green: #7CFC00;
+  --clr-blue: #20b2AA;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: cursive;
+  color: #23232380;
+  text-align: center;
+  background-image: linear-gradient(45deg, var(--clr-green), var(--clr-blue));
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  padding: .5em 1em;
+  border: none;
+  border-radius: .25em;
+  font: inherit;
+  font-size: clamp(1.2rem, 0.8333rem + 1.4667vw, 2.3rem);
+  cursor: pointer;
+  background-image: linear-gradient(45deg, var(--clr-green), var(--clr-blue));
+}
+
+h1 {
+  font-size: clamp(2rem, 1.6667rem + 1.3333vw, 3rem);
+  color: var(--clr-blue);
+  -webkit-text-stroke: .05rem var(--clr-green);
+  text-shadow: 2px 2px 3px var(--clr-green);
+}
+
+.joke {
+  max-width: 35ch;
+  font-size: clamp(1rem, 0.6667rem + 1.3333vw, 2rem);
+  color: var(--clr-green);
+  background: linear-gradient(45deg, var(--clr-green), var(--clr-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button,
+.emphasis {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: .15rem;
+}
+
+.emphasis {
+  font-weight: 900;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 10% 20%;
+  border-radius: 1em;
+  background-color: #232323CC;
+  box-shadow: 0 0 2em #232323;
+}
+
+.apple {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+      inset -20px -20px 25px #009088E6;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.apple:nth-child(1) {
+  border-radius: 29% 32% 40% 39%/33% 31% 61% 60%;
+}
+
+.apple:nth-child(2) {
+  border-radius: 29% 32% 40% 39%/33% 31% 61% 60%;
+}
+
+.apple:nth-child(3) {
+  border-radius: 29% 32% 40% 39%/33% 31% 61% 60%;
+}
+
+.apple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 15px;
+  background-color: #23232373;
+  transform: perspective(10px) rotateX(-50deg);
+}
+
+.apple:focus,
+.apple:hover {
+  transform: scale(.95);
+}
